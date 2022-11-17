@@ -101,7 +101,7 @@ f_co_hp = 0.5
 f_co_lp = 17
 
 # b_highPass = signal.firwin(351, f_co_hp/(Fs/2), pass_zero = 'highpass')
-b_highPass, a_highPass = signal.butter(4, f_co_hp/(Fs/2), btype = 'highpass')
+b_highPass, a_highPass = signal.butter(4, (f_co_hp-0.1)/(Fs/2), btype = 'highpass')
 
 w_1, h_1 = signal.freqz(b_highPass, a_highPass, fs=Fs)
 fig, ax1 = plt.subplots()
