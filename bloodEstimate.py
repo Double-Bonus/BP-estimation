@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from scipy.signal import find_peaks
 from scipy import signal
 
-plt.rcParams['figure.figsize'] = [16, 16]
 matData = scipy.io.loadmat('Painless021.mat')
 
 print(type(matData))
